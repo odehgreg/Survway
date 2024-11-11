@@ -1,15 +1,4 @@
-<script setup>
-import { ref } from "vue";
-
-defineProps({
-  msg: String,
-});
-
-const count = ref(0);
-</script>
-
-<template>
-  <!--
+<!--
   This example requires some changes to your config:
   
   ```
@@ -23,21 +12,24 @@ const count = ref(0);
   }
   ```
 -->
+<template>
   <!--
-  This example requires updating your template:
+    This example requires updating your template:
 
-  ```
-  <html class="h-full bg-white">
-  <body class="h-full">
-  ```
--->
-  <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    ```
+    <html class="h-full bg-white">
+    <body class="h-full">
+    ```
+  -->
+  <div
+    class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8"
+  >
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-      <img
+      <!-- <img
         class="mx-auto h-10 w-auto"
         src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
         alt="Your Company"
-      />
+      /> -->
       <h2
         class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900"
       >
@@ -57,7 +49,7 @@ const count = ref(0);
               name="email"
               type="email"
               autocomplete="email"
-              required
+              required=""
               class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
             />
           </div>
@@ -84,7 +76,7 @@ const count = ref(0);
               name="password"
               type="password"
               autocomplete="current-password"
-              required
+              required=""
               class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm/6"
             />
           </div>
@@ -102,6 +94,7 @@ const count = ref(0);
 
       <p class="mt-10 text-center text-sm/6 text-gray-500">
         Not a member?
+        {{ " " }}
         <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500"
           >Start a 14 day free trial</a
         >
@@ -109,9 +102,3 @@ const count = ref(0);
     </div>
   </div>
 </template>
-
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>
